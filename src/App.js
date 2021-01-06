@@ -10,6 +10,12 @@ class App extends React.Component {
       counter: 0,
     };
   }
+
+  incrementCounter = () => {
+    this.setState{
+      counter: this.state.counter + 1,
+    })
+  }
   render() {
   return (
     <div className="App">
@@ -17,7 +23,7 @@ class App extends React.Component {
         <img src={logo} className="App-logo" alt="logo" />
         <p>{this.state.counter}</p>
         <button 
-        onClick={() => this.setState({ counter: this.state.counter + 1 })}
+        onClick={this.incrementCounter}
         >
           Click me
         </button>
